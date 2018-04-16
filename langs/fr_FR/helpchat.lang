@@ -1,0 +1,4 @@
+# Dolibarr language file - fr_FR - helpchat
+CHARSET=UTF-8
+Module432427Name = Chat Expert Dolibarr
+Module432427Desc = Chattez avec un expert Dolibarr en cas de besoin
