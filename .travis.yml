@@ -38,7 +38,7 @@ php:
 #- '7.1'
 #- '7.2'
 #- hhvm		only with dist: trusty
-- nightly
+#- nightly
 
 env:
   global:
