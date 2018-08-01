@@ -53,13 +53,12 @@ class modHelpchat extends DolibarrModules
 		// It is used to group modules in module setup page
 		$this->family = "Inovea Conseil";
                 $this->editor_name = 'Inovea Conseil';
-                $this->editor_url = 'https://www.inovea-conseil.com';
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i','',get_class($this));
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
 		$this->description = "Module432427Desc";
 		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = '1.2';
+		$this->version = '1.3';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		// Where to store the module in setup page (0=common,1=interface,2=others,3=very specific)
@@ -112,6 +111,11 @@ class modHelpchat extends DolibarrModules
 		//                             1=>array('MYMODULE_MYNEWCONST2','chaine','myvalue','This is another constant to add',0, 'current', 1)
 		// );
 		$this->const = array();
+                 $country = explode(":", $conf->global->MAIN_INFO_SOCIETE_COUNTRY);
+        if ($country[0] == $conf->entity && $country[2] == "France")
+            $this->editor_url = "https://www.inovea-conseil.com (<a target='_blank' href='https://www.dolibiz.com/wp-content/uploads/attestation/attestation-" . $this->name . "-" . $this->version . ".pdf'>Attestation NF525</a>)";
+        else
+            $this->editor_url = 'https://www.inovea-conseil.com';
 
 		// Array to add new pages in new tabs
 		// Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@mymodule:$user->rights->mymodule->read:/mymodule/mynewtab1.php?id=__ID__',  	// To add a new tab identified by code tabname1

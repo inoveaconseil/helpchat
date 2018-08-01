@@ -1,3 +1,7 @@
+**1.3**
+* Add NF525 Compatibilty
+* XXXXXX
+
 **1.2**
 * Fork of the module
 * Fix for custom folder
