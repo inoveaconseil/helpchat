@@ -26,6 +26,6 @@ class ActionsHelpchat
 		       '{DOLIBARR_VERSION}' => $conf->global->MAIN_VERSION_LAST_INSTALL,
 		       ));
 		       
-		 return 1
+		 return 1;
 	}
 }
